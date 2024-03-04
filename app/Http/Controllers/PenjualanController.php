@@ -36,7 +36,9 @@ class PenjualanController extends Controller
     {
         $data = $request->validate([
             'tanggalpenjualan' => 'required',
+            'kasir' => 'required',
             'totalharga' => 'required',
+            'pembayaran' => 'required',
             'pelangganid' => 'required',
         ]);
 

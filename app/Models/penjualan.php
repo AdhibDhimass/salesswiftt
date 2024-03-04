@@ -9,7 +9,7 @@ class penjualan extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'tanggalpenjualan', 'totalharga','pelangganid',
+        'tanggalpenjualan', 'kasir', 'totalharga', 'pembayaran' ,'pelangganid',
     ];
     protected $table = 'penjualan';
 

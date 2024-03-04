@@ -21,7 +21,7 @@ Petugas
         }, 3000); // Notifikasi akan menghilang setelah 3 detik
     </script>
     @endif
-</div>
+</div>  
 <div class="row">
     <div class="col-12">
         <div class="card">
