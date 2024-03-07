@@ -13,14 +13,16 @@ return new class extends Migration
     {
         Schema::create('penjualan', function (Blueprint $table) {
             $table->id('id');
-            $table->date('tanggalpenjualan');
-            $table->string('kasir');
+            $table->unsignedBigInteger('userid');
+            $table->unsignedBigInteger('pelangganid');
+            $table->double('diskon');
             $table->double('totalharga');
             $table->double('pembayaran');
-            $table->unsignedBigInteger('pelangganid');
+            $table->date('tanggalpenjualan');
             $table->timestamps();
 
             // Foreign key constraint
+            $table->foreign('userid')->references('id')->on('users');
             $table->foreign('pelangganid')->references('id')->on('pelanggan');
         });
     }

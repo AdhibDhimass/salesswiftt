@@ -9,12 +9,16 @@ class penjualan extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'tanggalpenjualan', 'kasir', 'totalharga', 'pembayaran' ,'pelangganid',
+        'diskon', 'totalharga', 'pembayaran', 'tanggalpenjualan', 'userid', 'pelangganid',
     ];
     protected $table = 'penjualan';
 
     public function pelanggan()
     {
         return $this->belongsTo(Pelanggan::class, 'pelanggan');
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user');
     }
 }

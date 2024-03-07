@@ -50,8 +50,8 @@ Produk
                                 <td>{{ $produks->namaproduk }}</td>
                                 <td>{{ $produks->stok }}</td>
                                 <td>{{ $produks->kategori->nama_kategori }}</td>
-                                <td>Rp.{{ $produks->harga_beli }}</td>
-                                <td>Rp.{{ $produks->harga_jual }}</td>
+                                <td>Rp{{ number_format($produks->harga_jual, 0, ',', '.') }},-</td>
+                                <td>Rp{{ number_format($produks->harga_jual, 0, ',', '.') }},-</td>
                                 <td>
                                     <a href="{{ route('produk.edit', $produks->id) }}" class="btn btn-primary"><i class="fa-solid fa-edit"></i></a>
                                     <form action="/produk/{{ $produks->id }}" method="POST" style="display: inline-block">
